@@ -15,7 +15,7 @@ KEYWORDS="-* amd64 arm ppc ppc64 x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-mac
 IUSE="mpi"
 
 DEPEND="mpi? ( virtual/mpi )
-	~sys-libs/glibs-2.19"
+	~sys-libs/glibc-2.19"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
