@@ -14,8 +14,7 @@ SLOT="0"
 KEYWORDS="-* amd64 arm ppc ppc64 x86 ~amd64-linux ~x86-linux ~x64-macos ~x86-macos"
 IUSE="mpi"
 
-DEPEND="mpi? ( virtual/mpi )
-	=sys-libs/glibc-2.19-r1"
+DEPEND="mpi? ( virtual/mpi )"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
@@ -46,6 +45,8 @@ src_prepare() {
 
 	# glibc 2.21 fix.  Bug #554808.
 	epatch "${FILESDIR}"/${PN}-3.10.1-glibc-2.21.patch
+
+	epatch "${FILESDIR}"/${PN}-3.10.1-glibc-2.22.patch
 
 	# Allow users to test their own patches
 	epatch_user
