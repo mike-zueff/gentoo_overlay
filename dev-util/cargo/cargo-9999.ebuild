@@ -6,7 +6,7 @@ EAPI="6"
 
 inherit bash-completion-r1 eutils git-r3
 
-DEPEND=">=virtual/rust-999
+DEPEND="dev-lang/rust
 	dev-libs/openssl:*
 	dev-util/cmake
 	net-libs/http-parser
