@@ -6,6 +6,9 @@ EAPI="6"
 
 inherit golang-build golang-vcs
 
+DEPEND="dev-lang/go"
+RDEPEND="${DEPEND}"
+
 DESCRIPTION="A command-line tool to interact with Cloud Foundry"
 EGO_PN="github.com/cloudfoundry/cli"
 HOMEPAGE="https://github.com/cloudfoundry/cli"
