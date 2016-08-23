@@ -15,3 +15,8 @@ SLOT="0"
 post_src_compile() {
 	mv --force cli clee123123
 }
+
+pre_pkg_preinst() {
+	exeinto /opt/bin
+	doexe clee123123
+}
