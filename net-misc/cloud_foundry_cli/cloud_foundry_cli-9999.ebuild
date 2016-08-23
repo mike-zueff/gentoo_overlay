@@ -4,13 +4,14 @@
 
 EAPI="6"
 
-inherit git-r3
-
-DEPEND=""
-RDEPEND="${DEPEND}"
+inherit golang-build golang-vcs
 
 DESCRIPTION="A command-line tool to interact with Cloud Foundry"
-EGIT_REPO_URI="git://github.com/cloudfoundry/cli.git"
+EGO_PN="github.com/cloudfoundry/cli"
 HOMEPAGE="https://github.com/cloudfoundry/cli"
 LICENSE="Apache-2.0"
 SLOT="0"
+
+post_src_compile() {
+	mv --force cli clee123123
+}
