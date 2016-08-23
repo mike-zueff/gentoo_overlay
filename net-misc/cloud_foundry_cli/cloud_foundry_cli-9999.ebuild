@@ -12,11 +12,7 @@ HOMEPAGE="https://github.com/cloudfoundry/cli"
 LICENSE="Apache-2.0"
 SLOT="0"
 
-post_src_compile() {
-	mv --force cli clee123123
-}
-
 pre_pkg_preinst() {
 	exeinto /opt/bin
-	doexe clee123123
+	newexe "${S}/cli" cf
 }
