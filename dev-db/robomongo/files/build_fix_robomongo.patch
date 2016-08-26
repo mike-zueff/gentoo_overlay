@@ -1,0 +1,24 @@
+diff -ru robomongo-0.9.0-rc6.old/cmake/FindMongoDB.cmake robomongo-0.9.0-rc6/cmake/FindMongoDB.cmake
+--- robomongo-0.9.0-rc6.old/cmake/FindMongoDB.cmake	2016-02-13 16:19:51.000000000 +0300
++++ robomongo-0.9.0-rc6/cmake/FindMongoDB.cmake	2016-03-04 15:14:32.839475781 +0300
+@@ -92,7 +92,7 @@
+ 
+ # Get MongoDB repository recent tag
+ execute_process(
+-    COMMAND git describe --abbrev=0 --tags
++    COMMAND echo v0.9.0-rc7
+     WORKING_DIRECTORY ${MongoDB_DIR}
+     OUTPUT_VARIABLE MongoDB_RECENT_TAG
+     OUTPUT_STRIP_TRAILING_WHITESPACE
+diff -ru robomongo-0.9.0-rc6.old/cmake/RobomongoPackage.cmake robomongo-0.9.0-rc6/cmake/RobomongoPackage.cmake
+--- robomongo-0.9.0-rc6.old/cmake/RobomongoPackage.cmake	2016-02-13 16:19:51.000000000 +0300
++++ robomongo-0.9.0-rc6/cmake/RobomongoPackage.cmake	2016-03-04 14:14:23.879722930 +0300
+@@ -6,7 +6,7 @@
+ 
+ # Get last commit hash
+ execute_process(
+-    COMMAND git rev-parse --short HEAD
++    COMMAND echo 5971972
+     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+     OUTPUT_VARIABLE git_hash
+     OUTPUT_STRIP_TRAILING_WHITESPACE)

@@ -1,0 +1,30 @@
+diff -ru a/buildscripts/utils.py b/buildscripts/utils.py
+--- a/buildscripts/utils.py	2016-02-29 15:23:00.000000000 +0300
++++ b/buildscripts/utils.py	2016-03-04 13:44:02.823010515 +0300
+@@ -81,13 +81,7 @@
+     return open( f , 'r' ).read().strip()
+ 
+ def getGitDescribe():
+-    with open(os.devnull, "r+") as devnull:
+-        proc = subprocess.Popen("git describe",
+-            stdout=subprocess.PIPE,
+-            stderr=devnull,
+-            stdin=devnull,
+-            shell=True)
+-        return proc.communicate()[0].strip()
++    return "r3.2.0-20-g798c6c9"
+ 
+ def execsys( args ):
+     import subprocess
+diff -ru a/etc/evergreen.yml b/etc/evergreen.yml
+--- a/etc/evergreen.yml	2016-02-29 15:23:00.000000000 +0300
++++ b/etc/evergreen.yml	2016-03-04 13:42:32.433618324 +0300
+@@ -495,7 +495,7 @@
+           rm -rf ${install_directory|/data/mongo-install-directory}
+           ${scons|scons} ${compile_flags|} --use-new-tools all dist dist-debugsymbols distsrc-${ext|tgz} ${msi_target|}
+ 
+-          ${gitvars} git describe | ${python|python} buildscripts/generate_compile_expansions.py | tee compile_expansions.yml
++          echo "r3.2.0-20-g798c6c9" | ${python|python} buildscripts/generate_compile_expansions.py | tee compile_expansions.yml
+ 
+           mv mongodb-src-*.${ext|tgz} distsrc.${ext|tgz}
+           mv mongodb-*-debugsymbols.${ext|tgz} mongo-debugsymbols.tgz || true
