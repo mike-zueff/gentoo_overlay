@@ -76,3 +76,8 @@
   compton-0.1_beta2.ebuild, compton-9999.ebuild:
   add support for python 3.5
 
+  28 Oct 2016; Mike Gilbert <floppym@gentoo.org> -compton-0.1_beta1.ebuild:
+  remove old
+
+  Package-Manager: portage-2.3.2
+
