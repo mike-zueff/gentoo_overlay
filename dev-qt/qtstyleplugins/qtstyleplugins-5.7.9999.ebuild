@@ -3,9 +3,9 @@
 
 EAPI=6
 
-EGIT_REPO_URI="https://code.qt.io/qt/qtstyleplugins.git"
-
 inherit qt5-build
+
+unset EGIT_BRANCH
 
 DEPEND="=dev-qt/qtcore-5.7.1-r2:5/5.7"
 DESCRIPTION="GTK+ style plugins for Qt"
