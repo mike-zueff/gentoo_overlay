@@ -20,7 +20,7 @@ KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND=">dev-qt/qtcore-5
-		>dev-qt/qtgui-5[gtkstyle]
+		>dev-qt/qtgui-5
 		>dev-qt/qtdbus-5
 		>dev-qt/qtprintsupport-5
 		>dev-qt/qtimageformats-5"
