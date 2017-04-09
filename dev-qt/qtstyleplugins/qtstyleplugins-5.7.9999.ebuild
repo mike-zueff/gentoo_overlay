@@ -10,3 +10,8 @@ unset EGIT_BRANCH
 DEPEND="=dev-qt/qtcore-5.7.1-r2:5/5.7"
 DESCRIPTION="GTK+ style plugins for Qt"
 HOMEPAGE="https://code.qt.io/cgit/qt/qtstyleplugins"
+
+post_src_install() {
+  insinto /etc/profile.d
+  doins "${FILESDIR}/qtstyleplugins.sh"
+}
