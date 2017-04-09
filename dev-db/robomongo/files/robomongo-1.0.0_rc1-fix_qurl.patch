@@ -1,0 +1,17 @@
+Только в robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26/CMakeFiles/Progress: 91
+Только в robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26/src/robomongo/CMakeFiles/robomongo.dir/gui/widgets/workarea: WelcomeTab.cpp.o
+Только в robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26/src/robomongo/CMakeFiles/robomongo.dir: robomongo_automoc.cpp.o
+Только в robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26/src/robomongo/CMakeFiles/robomongo.dir/robomongo_automoc.dir: qrc_gui_CNBX7AZMSDMIJ4.cpp.o
+Только в robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26/src/robomongo/CMakeFiles/robomongo.dir/robomongo_automoc.dir: qrc_robo_QMXRICI7JQ2CCY.cpp.o
+diff -ru robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26.old/src/robomongo/gui/widgets/workarea/WelcomeTab.cpp robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26/src/robomongo/gui/widgets/workarea/WelcomeTab.cpp
+--- robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26.old/src/robomongo/gui/widgets/workarea/WelcomeTab.cpp	2017-03-15 13:13:13.000000000 +0300
++++ robomongo-43bf28968bd6cc0e4c55c578605e9f2441ecaf26/src/robomongo/gui/widgets/workarea/WelcomeTab.cpp	2017-03-19 03:28:47.589716998 +0300
+@@ -73,7 +73,7 @@
+     QString const blog4 = blog.arg("http://blog.robomongo.org/robomongo-1-rc1/",
+         "Robomongo RC8", "14 Apr 2016");
+ 
+-    QUrl const pic1_URL = "http://blog.robomongo.org/content/images/2017/02/bottom.png";
++    QUrl const pic1_URL = QUrl("http://blog.robomongo.org/content/images/2017/02/bottom.png");
+ 
+     WelcomeTab::WelcomeTab(QScrollArea *parent) :
+         QWidget(parent), _parent(parent)
