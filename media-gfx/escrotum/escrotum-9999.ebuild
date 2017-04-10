@@ -11,3 +11,4 @@ inherit distutils-r1 git-r3
 DEPEND="dev-python/pygtk:2[${PYTHON_USEDEP}]"
 DESCRIPTION="Linux screen capture using pygtk inspired by scrot"
 HOMEPAGE="https://github.com/Roger/escrotum"
+SLOT="0"
