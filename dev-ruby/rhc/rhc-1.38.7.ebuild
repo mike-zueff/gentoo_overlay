@@ -11,6 +11,7 @@ DESCRIPTION="OpenShift command-line tools"
 HOMEPAGE="https://github.com/openshift/rhc"
 KEYWORDS="~amd64"
 LICENSE="Apache-2.0"
+SLOT="1"
 
 ruby_add_rdepend "
     <=dev-ruby/commander-4.4.0
