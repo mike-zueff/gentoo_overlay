@@ -23,5 +23,5 @@ ruby_add_rdepend "
     >=dev-ruby/httpclient-2.4.0
     >=dev-ruby/net-scp-1.1.2
     >=dev-ruby/net-ssh-multi-1.2.0
-    >=dev-ruby/openr-0
+    >=dev-ruby/open4-0
     "
