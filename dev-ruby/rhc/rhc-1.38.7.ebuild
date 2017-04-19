@@ -14,8 +14,8 @@ LICENSE="Apache-2.0"
 SLOT="1"
 
 ruby_add_rdepend "
-    <=dev-ruby/commander-4.4.0
-    <=dev-ruby/highline-1.7.6
+    <=dev-ruby/commander-4.4.1
+    <=dev-ruby/highline-1.7.8
     <=dev-ruby/httpclient-2.8.2.4
     >=dev-ruby/archive-tar-minitar-0
     >=dev-ruby/commander-4.0
