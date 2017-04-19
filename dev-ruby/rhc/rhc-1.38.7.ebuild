@@ -23,6 +23,7 @@ ruby_add_rdepend "
     dev-ruby/open4
     "
 
-all_ruby_prepare() {
-    sed --in-place 's/archive-tar-//' ${PN}.gemspec
+ruby_fakegem_metadata_gemspec() {
+    sed --in-place 's/archive-tar-//' "${1}"
+    ${RUBY} -r yaml -e "puts Gem::Specification.from_yaml(File::open('$1', :encoding => 'UTF-8').read).to_ruby" > $2
 }
