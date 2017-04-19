@@ -3,7 +3,7 @@
 
 EAPI=6
 
-USE_RUBY="ruby23 ruby24"
+USE_RUBY="ruby23"
 
 inherit ruby-fakegem
 
@@ -14,14 +14,11 @@ LICENSE="Apache-2.0"
 SLOT="1"
 
 ruby_add_rdepend "
-    <=dev-ruby/commander-4.4.1
-    <=dev-ruby/highline-1.7.8
-    <=dev-ruby/httpclient-2.8.2.4
-    >=dev-ruby/archive-tar-minitar-0
-    >=dev-ruby/commander-4.0
-    >=dev-ruby/highline-1.6.11
-    >=dev-ruby/httpclient-2.4.0
-    >=dev-ruby/net-scp-1.1.2
-    >=dev-ruby/net-ssh-multi-1.2.0
-    >=dev-ruby/open4-0
+    dev-ruby/archive-tar-minitar
+    dev-ruby/commander
+    dev-ruby/highline
+    dev-ruby/httpclient
+    dev-ruby/net-scp
+    dev-ruby/net-ssh-multi
+    dev-ruby/open4
     "
