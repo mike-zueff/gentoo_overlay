@@ -50,7 +50,7 @@ dependencies:
   type: :runtime
   version_requirements: *id002
 - !ruby/object:Gem::Dependency 
-  name: archive-tar-minitar
+  name: minitar
   prerelease: false
   requirement: &id003 !ruby/object:Gem::Requirement 
     none: false
