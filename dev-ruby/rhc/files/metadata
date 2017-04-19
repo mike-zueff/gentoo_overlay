@@ -50,7 +50,7 @@ dependencies:
   type: :runtime
   version_requirements: *id002
 - !ruby/object:Gem::Dependency 
-  name: minitar
+  name: archive-tar-minitar
   prerelease: false
   requirement: &id003 !ruby/object:Gem::Requirement 
     none: false
@@ -76,6 +76,14 @@ dependencies:
         - 4
         - 0
         version: "4.0"
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 51
+        segments: 
+        - 4
+        - 3
+        - 0
+        version: 4.3.0
   type: :runtime
   version_requirements: *id004
 - !ruby/object:Gem::Dependency 
@@ -84,6 +92,14 @@ dependencies:
   requirement: &id005 !ruby/object:Gem::Requirement 
     none: false
     requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 25
+        segments: 
+        - 1
+        - 6
+        - 11
+        version: 1.6.11
   type: :runtime
   version_requirements: *id005
 - !ruby/object:Gem::Dependency 
@@ -100,6 +116,14 @@ dependencies:
         - 4
         - 0
         version: 2.4.0
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 19
+        segments: 
+        - 2
+        - 7
+        - 0
+        version: 2.7.0
   type: :runtime
   version_requirements: *id006
 - !ruby/object:Gem::Dependency 
@@ -138,6 +162,13 @@ dependencies:
   requirement: &id009 !ruby/object:Gem::Requirement 
     none: false
     requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 23
+        segments: 
+        - 1
+        - 12
+        version: "1.12"
   type: :development
   version_requirements: *id009
 - !ruby/object:Gem::Dependency 
@@ -154,6 +185,13 @@ dependencies:
         - 8
         - 0
         version: 2.8.0
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 197
+        segments: 
+        - 2
+        - 99
+        version: "2.99"
   type: :development
   version_requirements: *id010
 - !ruby/object:Gem::Dependency 
@@ -169,6 +207,14 @@ dependencies:
         - 0
         - 4
         version: "0.4"
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 7
+        segments: 
+        - 0
+        - 6
+        - 0
+        version: 0.6.0
   type: :development
   version_requirements: *id011
 - !ruby/object:Gem::Dependency 
@@ -191,6 +237,14 @@ dependencies:
   requirement: &id013 !ruby/object:Gem::Requirement 
     none: false
     requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 51
+        segments: 
+        - 1
+        - 3
+        - 20
+        version: 1.3.20
   type: :development
   version_requirements: *id013
 - !ruby/object:Gem::Dependency 
@@ -199,6 +253,13 @@ dependencies:
   requirement: &id014 !ruby/object:Gem::Requirement 
     none: false
     requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 7
+        segments: 
+        - 3
+        - 0
+        version: "3.0"
   type: :development
   version_requirements: *id014
 description: The client tools for the OpenShift platform that allow for application management.
