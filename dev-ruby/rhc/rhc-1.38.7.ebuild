@@ -11,7 +11,7 @@ DESCRIPTION="OpenShift command-line tools"
 HOMEPAGE="https://github.com/openshift/rhc"
 KEYWORDS="~amd64"
 LICENSE="Apache-2.0"
-SLOT="1"
+SLOT="0"
 
 ruby_add_rdepend "
     dev-ruby/archive-tar-minitar
@@ -22,3 +22,7 @@ ruby_add_rdepend "
     dev-ruby/net-ssh-multi
     dev-ruby/open4
     "
+
+all_ruby_prepare() {
+    sed --in-place 's/archive-tar-//' ${PN}.gemspec
+}
