@@ -3,7 +3,7 @@
 
 EAPI=6
 
-USE_RUBY="ruby24"
+USE_RUBY="ruby23 ruby24"
 
 inherit ruby-fakegem
 
