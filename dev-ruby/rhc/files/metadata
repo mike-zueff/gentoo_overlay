@@ -1,0 +1,463 @@
+--- !ruby/object:Gem::Specification 
+name: rhc
+version: !ruby/object:Gem::Version 
+  hash: 129
+  prerelease: 
+  segments: 
+  - 1
+  - 38
+  - 7
+  version: 1.38.7
+platform: ruby
+authors: 
+- Red Hat
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2016-08-01 00:00:00 Z
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: net-scp
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 23
+        segments: 
+        - 1
+        - 1
+        - 2
+        version: 1.1.2
+  type: :runtime
+  version_requirements: *id001
+- !ruby/object:Gem::Dependency 
+  name: net-ssh-multi
+  prerelease: false
+  requirement: &id002 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 31
+        segments: 
+        - 1
+        - 2
+        - 0
+        version: 1.2.0
+  type: :runtime
+  version_requirements: *id002
+- !ruby/object:Gem::Dependency 
+  name: minitar
+  prerelease: false
+  requirement: &id003 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id003
+- !ruby/object:Gem::Dependency 
+  name: commander
+  prerelease: false
+  requirement: &id004 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 27
+        segments: 
+        - 4
+        - 0
+        version: "4.0"
+  type: :runtime
+  version_requirements: *id004
+- !ruby/object:Gem::Dependency 
+  name: highline
+  prerelease: false
+  requirement: &id005 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+  type: :runtime
+  version_requirements: *id005
+- !ruby/object:Gem::Dependency 
+  name: httpclient
+  prerelease: false
+  requirement: &id006 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 31
+        segments: 
+        - 2
+        - 4
+        - 0
+        version: 2.4.0
+  type: :runtime
+  version_requirements: *id006
+- !ruby/object:Gem::Dependency 
+  name: open4
+  prerelease: false
+  requirement: &id007 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id007
+- !ruby/object:Gem::Dependency 
+  name: rake
+  prerelease: false
+  requirement: &id008 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 49
+        segments: 
+        - 0
+        - 8
+        - 7
+        version: 0.8.7
+  type: :development
+  version_requirements: *id008
+- !ruby/object:Gem::Dependency 
+  name: webmock
+  prerelease: false
+  requirement: &id009 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+  type: :development
+  version_requirements: *id009
+- !ruby/object:Gem::Dependency 
+  name: rspec
+  prerelease: false
+  requirement: &id010 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 47
+        segments: 
+        - 2
+        - 8
+        - 0
+        version: 2.8.0
+  type: :development
+  version_requirements: *id010
+- !ruby/object:Gem::Dependency 
+  name: fakefs
+  prerelease: false
+  requirement: &id011 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        - 4
+        version: "0.4"
+  type: :development
+  version_requirements: *id011
+- !ruby/object:Gem::Dependency 
+  name: thor
+  prerelease: false
+  requirement: &id012 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :development
+  version_requirements: *id012
+- !ruby/object:Gem::Dependency 
+  name: cucumber
+  prerelease: false
+  requirement: &id013 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+  type: :development
+  version_requirements: *id013
+- !ruby/object:Gem::Dependency 
+  name: activesupport
+  prerelease: false
+  requirement: &id014 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+  type: :development
+  version_requirements: *id014
+description: The client tools for the OpenShift platform that allow for application management.
+email: dev@lists.openshift.redhat.com
+executables: 
+- rhc
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib/rhc.rb
+- lib/rhc/auth.rb
+- lib/rhc/version.rb
+- lib/rhc/core_ext.rb
+- lib/rhc/json.rb
+- lib/rhc/wizard.rb
+- lib/rhc/scp_helpers.rb
+- lib/rhc/rest.rb
+- lib/rhc/autocomplete.rb
+- lib/rhc/git_helpers.rb
+- lib/rhc/servers.rb
+- lib/rhc/command_runner.rb
+- lib/rhc/context_helper.rb
+- lib/rhc/config.rb
+- lib/rhc/exceptions.rb
+- lib/rhc/commands/team.rb
+- lib/rhc/commands/threaddump.rb
+- lib/rhc/commands/cartridge.rb
+- lib/rhc/commands/base.rb
+- lib/rhc/commands/port_forward.rb
+- lib/rhc/commands/logout.rb
+- lib/rhc/commands/setup.rb
+- lib/rhc/commands/deployment.rb
+- lib/rhc/commands/tail.rb
+- lib/rhc/commands/scp.rb
+- lib/rhc/commands/server.rb
+- lib/rhc/commands/ssh.rb
+- lib/rhc/commands/apps.rb
+- lib/rhc/commands/alias.rb
+- lib/rhc/commands/region.rb
+- lib/rhc/commands/authorization.rb
+- lib/rhc/commands/sshkey.rb
+- lib/rhc/commands/app.rb
+- lib/rhc/commands/member.rb
+- lib/rhc/commands/domain.rb
+- lib/rhc/commands/env.rb
+- lib/rhc/commands/account.rb
+- lib/rhc/commands/git_clone.rb
+- lib/rhc/commands/snapshot.rb
+- lib/rhc/highline_extensions.rb
+- lib/rhc/tar_gz.rb
+- lib/rhc/commands.rb
+- lib/rhc/ssh_helpers.rb
+- lib/rhc/output_helpers.rb
+- lib/rhc/server_helpers.rb
+- lib/rhc/coverage_helper.rb
+- lib/rhc/help_formatter.rb
+- lib/rhc/rest/team.rb
+- lib/rhc/rest/key.rb
+- lib/rhc/rest/cartridge.rb
+- lib/rhc/rest/base.rb
+- lib/rhc/rest/activation.rb
+- lib/rhc/rest/deployment.rb
+- lib/rhc/rest/gear_group.rb
+- lib/rhc/rest/environment_variable.rb
+- lib/rhc/rest/membership.rb
+- lib/rhc/rest/user.rb
+- lib/rhc/rest/application.rb
+- lib/rhc/rest/api.rb
+- lib/rhc/rest/client.rb
+- lib/rhc/rest/alias.rb
+- lib/rhc/rest/region.rb
+- lib/rhc/rest/authorization.rb
+- lib/rhc/rest/mock.rb
+- lib/rhc/rest/httpclient.rb
+- lib/rhc/rest/attributes.rb
+- lib/rhc/rest/domain.rb
+- lib/rhc/vendor/okjson.rb
+- lib/rhc/vendor/parseconfig.rb
+- lib/rhc/vendor/zliby.rb
+- lib/rhc/vendor/sshkey.rb
+- lib/rhc/auth/token.rb
+- lib/rhc/auth/x509.rb
+- lib/rhc/auth/basic.rb
+- lib/rhc/auth/token_store.rb
+- lib/rhc/helpers.rb
+- lib/rhc/cli.rb
+- lib/rhc/deployment_helpers.rb
+- lib/rhc/cartridge_helpers.rb
+- lib/rhc/autocomplete_templates/bash.erb
+- lib/rhc/usage_templates/help.erb
+- lib/rhc/usage_templates/command_syntax_help.erb
+- lib/rhc/usage_templates/options_help.erb
+- lib/rhc/usage_templates/missing_help.erb
+- lib/rhc/usage_templates/command_help.erb
+- conf/express.conf
+- autocomplete/rhc_bash
+- LICENSE
+- COPYRIGHT
+- README.md
+- Rakefile
+- spec/rest_spec_helper.rb
+- spec/keys/server.pem
+- spec/keys/example_private.pem
+- spec/keys/example.pem
+- spec/spec_helper.rb
+- spec/direct_execution_helper.rb
+- spec/coverage_helper.rb
+- spec/wizard_spec_helper.rb
+- spec/rhc/highline_extensions_spec.rb
+- spec/rhc/cli_spec.rb
+- spec/rhc/rest_spec.rb
+- spec/rhc/targz_spec.rb
+- spec/rhc/wizard_spec.rb
+- spec/rhc/servers_spec.rb
+- spec/rhc/rest_client_spec.rb
+- spec/rhc/commands/sshkey_spec.rb
+- spec/rhc/commands/apps_spec.rb
+- spec/rhc/commands/account_spec.rb
+- spec/rhc/commands/domain_spec.rb
+- spec/rhc/commands/team_spec.rb
+- spec/rhc/commands/cartridge_spec.rb
+- spec/rhc/commands/app_spec.rb
+- spec/rhc/commands/snapshot_spec.rb
+- spec/rhc/commands/ssh_spec.rb
+- spec/rhc/commands/region_spec.rb
+- spec/rhc/commands/tail_spec.rb
+- spec/rhc/commands/setup_spec.rb
+- spec/rhc/commands/alias_spec.rb
+- spec/rhc/commands/scp_spec.rb
+- spec/rhc/commands/env_spec.rb
+- spec/rhc/commands/port_forward_spec.rb
+- spec/rhc/commands/git_clone_spec.rb
+- spec/rhc/commands/authorization_spec.rb
+- spec/rhc/commands/member_spec.rb
+- spec/rhc/commands/threaddump_spec.rb
+- spec/rhc/commands/server_spec.rb
+- spec/rhc/commands/deployment_spec.rb
+- spec/rhc/commands/logout_spec.rb
+- spec/rhc/assets/targz_sample.tar.gz
+- spec/rhc/assets/env_vars_2.txt
+- spec/rhc/assets/cert_key_rsa
+- spec/rhc/assets/targz_corrupted.tar.gz
+- spec/rhc/assets/cert.crt
+- spec/rhc/assets/env_vars.txt
+- spec/rhc/assets/empty.txt
+- spec/rhc/assets/foo.txt
+- spec/rhc/json_spec.rb
+- spec/rhc/auth_spec.rb
+- spec/rhc/config_spec.rb
+- spec/rhc/helpers_spec.rb
+- spec/rhc/rest_application_spec.rb
+- spec/rhc/command_spec.rb
+- features/server_feature.rb
+- features/members_feature.rb
+- features/assets/deploy.tar.gz
+- features/deployments_feature.rb
+- features/app_feature.rb
+- features/core_feature.rb
+- features/keys_feature.rb
+- features/domains_feature.rb
+- bin/rhc
+homepage: https://github.com/openshift/rhc
+licenses: []
+
+post_install_message: |-
+  ===========================================================================
+  
+  If this is your first time installing the RHC tools, please run 'rhc setup'
+  
+  ===========================================================================
+rdoc_options: []
+
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.8.16
+signing_key: 
+specification_version: 3
+summary: OpenShift Client Tools
+test_files: 
+- spec/rest_spec_helper.rb
+- spec/keys/server.pem
+- spec/keys/example_private.pem
+- spec/keys/example.pem
+- spec/spec_helper.rb
+- spec/direct_execution_helper.rb
+- spec/coverage_helper.rb
+- spec/wizard_spec_helper.rb
+- spec/rhc/highline_extensions_spec.rb
+- spec/rhc/cli_spec.rb
+- spec/rhc/rest_spec.rb
+- spec/rhc/targz_spec.rb
+- spec/rhc/wizard_spec.rb
+- spec/rhc/servers_spec.rb
+- spec/rhc/rest_client_spec.rb
+- spec/rhc/commands/sshkey_spec.rb
+- spec/rhc/commands/apps_spec.rb
+- spec/rhc/commands/account_spec.rb
+- spec/rhc/commands/domain_spec.rb
+- spec/rhc/commands/team_spec.rb
+- spec/rhc/commands/cartridge_spec.rb
+- spec/rhc/commands/app_spec.rb
+- spec/rhc/commands/snapshot_spec.rb
+- spec/rhc/commands/ssh_spec.rb
+- spec/rhc/commands/region_spec.rb
+- spec/rhc/commands/tail_spec.rb
+- spec/rhc/commands/setup_spec.rb
+- spec/rhc/commands/alias_spec.rb
+- spec/rhc/commands/scp_spec.rb
+- spec/rhc/commands/env_spec.rb
+- spec/rhc/commands/port_forward_spec.rb
+- spec/rhc/commands/git_clone_spec.rb
+- spec/rhc/commands/authorization_spec.rb
+- spec/rhc/commands/member_spec.rb
+- spec/rhc/commands/threaddump_spec.rb
+- spec/rhc/commands/server_spec.rb
+- spec/rhc/commands/deployment_spec.rb
+- spec/rhc/commands/logout_spec.rb
+- spec/rhc/assets/targz_sample.tar.gz
+- spec/rhc/assets/env_vars_2.txt
+- spec/rhc/assets/cert_key_rsa
+- spec/rhc/assets/targz_corrupted.tar.gz
+- spec/rhc/assets/cert.crt
+- spec/rhc/assets/env_vars.txt
+- spec/rhc/assets/empty.txt
+- spec/rhc/assets/foo.txt
+- spec/rhc/json_spec.rb
+- spec/rhc/auth_spec.rb
+- spec/rhc/config_spec.rb
+- spec/rhc/helpers_spec.rb
+- spec/rhc/rest_application_spec.rb
+- spec/rhc/command_spec.rb
+- features/server_feature.rb
+- features/members_feature.rb
+- features/assets/deploy.tar.gz
+- features/deployments_feature.rb
+- features/app_feature.rb
+- features/core_feature.rb
+- features/keys_feature.rb
+- features/domains_feature.rb

@@ -24,6 +24,5 @@ ruby_add_rdepend "
     "
 
 ruby_fakegem_metadata_gemspec() {
-    sed --in-place 's/archive-tar-//' "${1}"
-    ${RUBY} -r yaml -e "puts Gem::Specification.from_yaml(File::open('$1', :encoding => 'UTF-8').read).to_ruby" > $2
+    ${RUBY} -r yaml -e "puts Gem::Specification.from_yaml(File::open('${FILESDIR}/metadata', :encoding => 'UTF-8').read).to_ruby" > $2
 }
