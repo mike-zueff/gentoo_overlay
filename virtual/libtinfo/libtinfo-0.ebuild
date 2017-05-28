@@ -4,6 +4,6 @@
 EAPI=6
 
 DEPEND="sys-libs/ncurses:5[tinfo]"
-DESCRIPTION="ncurses:5 for YCM"
+DESCRIPTION="libtinfo.so.5"
 KEYWORDS="~amd64"
 SLOT="0"
