@@ -13,8 +13,7 @@ LICENSE="BSD"
 SLOT="0"
 
 DEPEND="dev-libs/boost[threads]
-        dev-util/boost-build
         dev-util/cmake
-        net-libs/libpcap"
+        net-libs/libpcap[usb]"
 
 RDEPEND="${DEPEND}"
