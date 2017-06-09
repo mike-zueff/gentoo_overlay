@@ -15,6 +15,6 @@ SLOT="0"
 DEPEND="dev-libs/boost[threads]
         dev-util/boost-build
         dev-util/cmake
-        net-libs/pcap"
+        net-libs/libpcap"
 
 RDEPEND="${DEPEND}"
