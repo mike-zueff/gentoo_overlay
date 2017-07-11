@@ -33,7 +33,7 @@ SLOT="${TOOLCHAIN_GCC_PV}"
 KEYWORDS="~amd64"
 IUSE="bootstrap"
 
-RDEPEND="!sys-devel/gcc:${TOOLCHAIN_GCC_PV}"
+RDEPEND="sys-devel/gcc"
 DEPEND="${RDEPEND}
 	elibc_glibc? ( >=sys-libs/glibc-2.13 )
 	>=sys-devel/binutils-2.20"
