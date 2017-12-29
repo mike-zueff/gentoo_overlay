@@ -43,7 +43,7 @@ src_configure() {
 
 pre_src_install() {
 	sed --in-place 's/^systemddir = $(libdir)/systemddir = \/lib/g' \
-			misc/Makefile.in
+			"${S}"/misc/Makefile.in
 }
 
 src_install() {
