@@ -10,6 +10,7 @@ diff-0.1.0
 env_logger-0.4.0
 getopts-0.2.0
 kernel32-sys-0.2.2
+lazy_static-1.0.0
 libc-0.2.11
 log-0.3.0
 regex-0.2.0
