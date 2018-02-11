@@ -87,8 +87,9 @@ src_configure() {
 		$(use_with xosd)
 		$(use_with libnotify)
 		$(use_with keylogger)
-		--disable-werror
 	)
+
+	sed -i 's/-Werror//g' configure.ac
 
 	econf ${myeconfargs[@]}
 	[[ -z ${PV%%*9999} ]] && emake clean
