@@ -87,6 +87,7 @@ src_configure() {
 		$(use_with xosd)
 		$(use_with libnotify)
 		$(use_with keylogger)
+		--disable-werror
 	)
 
 	econf ${myeconfargs[@]}
