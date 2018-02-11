@@ -3,59 +3,61 @@
 
 EAPI=6
 
-PLOCALES="be de es he ro ru uk"
-GNOME2_EAUTORECONF="yes"
-inherit l10n gnome2
-if [[ -z ${PV%%*9999} ]]; then
-	inherit git-r3
-	EGIT_REPO_URI="https://github.com/AndrewCrewKuznetsov/xneur-devel.git"
-	SRC_URI=""
-	S="${WORKDIR}/${P}/${PN}"
-else
-	SRC_URI="
-		https://launchpad.net/ubuntu/+archive/primary/+files/${PN}_${PV}.orig.tar.gz
-		mirror://githubraw/AndrewCrewKuznetsov/xneur-devel/master/dists/${PV}/${PN}_${PV}.orig.tar.gz
-	"
-	RESTRICT="primaryuri"
-	KEYWORDS="~amd64 ~x86"
-fi
+inherit autotools eutils gnome2-utils versionator
 
 DESCRIPTION="GTK+ based GUI for xneur"
 HOMEPAGE="http://www.xneur.ru/"
-EGIT_REPO_URI="https://github.com/AndrewCrewKuznetsov/xneur-devel.git"
+SRC_URI="https://launchpad.net/~andrew-crew-kuznetsov/+archive/xneur-stable/+files/${PN}_${PV}.orig.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="ayatana gconf nls"
+KEYWORDS="~amd64 ~x86"
+IUSE="appindicator +gconf nls"
 
-DEPEND="
-	gnome-base/libglade:2.0
-	gconf? ( gnome-base/gconf:2 )
+COMMON_DEPEND="gnome-base/libglade:2.0
 	>=sys-devel/gettext-0.16.1
-	>=x11-libs/gtk+-2.20:2
-	=x11-misc/xneur-${PV}:${SLOT}[nls=]
-	ayatana? ( dev-libs/libappindicator:2 )
-"
-RDEPEND="
-	${DEPEND}
-	nls? ( virtual/libintl )
-"
-DEPEND="
-	${DEPEND}
-	nls? ( sys-devel/gettext )
+	>=x11-libs/gtk+-2.18:2
+	>=x11-misc/xneur-$(get_version_component_range 1-2)
+	appindicator? ( dev-libs/libappindicator:2 )
+	gconf? ( gnome-base/gconf:2 )
+	!x11-misc/xneur[gtk3]"
+RDEPEND="${COMMON_DEPEND}
+	nls? ( virtual/libintl )"
+DEPEND="${COMMON_DEPEND}
+	dev-util/intltool
 	virtual/pkgconfig
-"
+	nls? ( sys-devel/gettext )"
 
 src_prepare() {
-	sed -e '/\(README\|TODO\)/d' -i Makefile.am
-	gnome2_src_prepare
+	default
+
+	rm -f m4/{lt~obsolete,ltoptions,ltsugar,ltversion,libtool}.m4 \
+		ltmain.sh aclocal.m4 || die
+	sed -i "s/-Werror -g0//" configure.ac || die
+	sed -i -e '/Encoding/d' -e '/Categories/s/$/;/' ${PN}.desktop.in || die
+	eautoreconf
 }
 
 src_configure() {
-	local myconf="
-		$(use_with ayatana appindicator)
+	econf \
+		$(use_enable nls) \
+		$(use_with appindicator) \
 		$(use_with gconf)
-		$(use_enable nls)
-	"
-	gnome2_src_configure ${myconf}
+}
+
+src_install() {
+	default
+	doicon pixmaps/gxneur.png
+}
+
+pkg_preinst() {
+	gnome2_icon_savelist
+}
+
+pkg_postinst() {
+	gnome2_icon_cache_update
+}
+
+pkg_postrm() {
+	gnome2_icon_cache_update
 }
