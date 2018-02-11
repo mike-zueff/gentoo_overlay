@@ -1,7 +1,7 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=4
+EAPI=2
 
 inherit autotools eutils
 
@@ -12,7 +12,7 @@ SRC_URI="https://launchpad.net/~andrew-crew-kuznetsov/+archive/${PN}-stable/+fil
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="aplay debug gstreamer gtk keylogger libnotify nls openal xosd +spell"
+IUSE="aplay debug gstreamer +gtk gtk3disabled keylogger libnotify nls openal xosd +spell"
 
 COMMON_DEPEND=">=dev-libs/libpcre-5.0
 	sys-libs/zlib
@@ -25,8 +25,8 @@ COMMON_DEPEND=">=dev-libs/libpcre-5.0
 			aplay? ( >=media-sound/alsa-utils-1.0.17 ) ) )
 	libnotify? (
 		gtk? (
-			gtk3? ( x11-libs/gtk+:3 )
-			!gtk3? ( x11-libs/gtk+:2 ) )
+			gtk3disabled? ( x11-libs/gtk+:3 )
+			!gtk3disabled? ( x11-libs/gtk+:2 ) )
 		>=x11-libs/libnotify-0.4.0 )
 	spell? ( app-text/enchant )
 	xosd? ( x11-libs/xosd )"
@@ -34,7 +34,7 @@ RDEPEND="${COMMON_DEPEND}
 	gstreamer? ( media-libs/gst-plugins-good
 		media-plugins/gst-plugins-alsa )
 	nls? ( virtual/libintl )
-	gtk3? ( !x11-misc/gxneur )"
+	gtk3disabled? ( !x11-misc/gxneur )"
 DEPEND="${COMMON_DEPEND}
 	virtual/pkgconfig
 	nls? ( sys-devel/gettext )"
@@ -72,7 +72,7 @@ src_configure() {
 	fi
 
 	if use gtk; then
-		if use gtk3; then
+		if use gtk3disabled; then
 			myconf="${myconf} --with-gtk=gtk3"
 		else
 			myconf="${myconf} --with-gtk=gtk2"
