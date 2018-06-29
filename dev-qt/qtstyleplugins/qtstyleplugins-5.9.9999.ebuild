@@ -7,7 +7,8 @@ inherit qt5-build
 
 unset EGIT_BRANCH
 
-DEPEND="dev-qt/qtcore:5"
+DEPEND="dev-qt/qtcore:5
+	x11-themes/gtk-engines-murrine"
 DESCRIPTION="GTK+ style plugins for Qt"
 HOMEPAGE="https://code.qt.io/cgit/qt/qtstyleplugins"
 
