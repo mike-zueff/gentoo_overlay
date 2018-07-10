@@ -43,7 +43,7 @@ src_configure() {
 
 pre_src_install() {
 	sed --in-place 's/^systemddir = $(libdir)/systemddir = \/lib/g' \
-			"${S}"/misc/Makefile.in
+			"${WORKDIR}/miredo-1.2.6"/misc/Makefile.in
 }
 
 src_install() {
