@@ -7,7 +7,7 @@ inherit autotools eutils linux-info user
 
 DESCRIPTION="Miredo is an open-source Teredo IPv6 tunneling software"
 HOMEPAGE="http://www.remlab.net/miredo/"
-SRC_URI="http://www.remlab.net/files/miredo_improved/miredo-1.2.6.tar.xz"
+SRC_URI="http://www.remlab.net/files/${PN}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -28,8 +28,8 @@ RESTRICT="test"
 DOCS=( AUTHORS ChangeLog NEWS README TODO THANKS )
 
 src_prepare() {
-	epatch "${FILESDIR}"/miredo_improved-1.2.5-configure-libcap.diff
-	epatch "${FILESDIR}"/miredo_improved-1.2.5-ip-path.patch
+	epatch "${FILESDIR}"/${PN}-1.2.5-configure-libcap.diff
+	epatch "${FILESDIR}"/${PN}-1.2.5-ip-path.patch
 	eautoreconf
 }
 
@@ -43,7 +43,7 @@ src_configure() {
 
 pre_src_install() {
 	sed --in-place 's/^systemddir = $(libdir)/systemddir = \/lib/g' \
-			"${WORKDIR}/miredo-1.2.6"/misc/Makefile.in
+			"${S}"/misc/Makefile.in
 }
 
 src_install() {
