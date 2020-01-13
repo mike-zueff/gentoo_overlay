@@ -8,7 +8,7 @@ PYTHON_COMPAT=(python2_7 python3_{6,7,8})
 
 inherit distutils-r1 git-r3
 
-DEPEND="dev-python/xcffib"
+DEPEND="dev-python/pygobject:2 dev-python/pygobject:3 dev-python/xcffib"
 DESCRIPTION="Linux screen capture using pygtk inspired by scrot"
 HOMEPAGE="https://github.com/Roger/escrotum"
 SLOT="0"
