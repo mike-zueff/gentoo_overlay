@@ -23,7 +23,7 @@ dev-libs/openssl:0
 net-libs/cppzmq
 net-dns/unbound
 dev-qt/qtcore:5
-dev-qt/qtdeclarative:5[xml]
+dev-qt/qtdeclarative:5
 dev-qt/qtquickcontrols:5
 dev-qt/qtquickcontrols2:5
 dev-qt/qtgraphicaleffects:5
