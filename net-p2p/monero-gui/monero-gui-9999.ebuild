@@ -31,7 +31,7 @@ qrcode? (
 dev-qt/qtmultimedia:5[qml]
 media-gfx/zbar
 )
-upnp? ( net-libs/miniupnpc:0/16 )
+upnp? ( net-libs/miniupnpc )
 unwind? ( sys-libs/libunwind )
 ldns? ( net-libs/ldns )
 lzma? ( app-arch/xz-utils )
