@@ -12,6 +12,11 @@ DEPEND="dev-qt/qtcore:5
 DESCRIPTION="GTK+ style plugins for Qt"
 HOMEPAGE="https://code.qt.io/cgit/qt/qtstyleplugins"
 
+PATCHES=(
+	"${FILESDIR}"/0001-fix-build-against-Qt-5.15.patch
+	"${FILESDIR}"/0002-fix-gtk2-background.patch
+)
+
 post_src_install() {
   insinto /etc/profile.d
   doins "${FILESDIR}/qtstyleplugins.sh"
