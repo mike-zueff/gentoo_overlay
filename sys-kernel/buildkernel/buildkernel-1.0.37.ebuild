@@ -32,6 +32,7 @@ RDEPEND="${DEPEND}
 
 # ebuild function overrides
 src_prepare() {
+	default
 	# if the plymouth use flag not set, set script variable accordingly
 	if ! use plymouth; then
 		elog "plymouth USE flag not selected - patching script accordingly."

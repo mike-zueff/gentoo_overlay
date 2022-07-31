@@ -30,6 +30,7 @@ RDEPEND="${DEPEND}
 
 # ebuild function overrides
 src_prepare() {
+	default
 	# if the buildkernel use flag not set, set script variable accordingly
 	if ! use buildkernel; then
 		elog "buildkernel USE flag not selected - patching script accordingly."

@@ -28,6 +28,7 @@ DEPEND="dev-lang/perl"
 S="${WORKDIR}/${MY_P}"
 
 src_prepare() {
+	default
 	# Install RU man page in right location
 	sed -e "/^man_MANS =/s/ gpg\.ru\.1//" -i doc/Makefile.in || die "sed doc/Makefile.in failed"
 
