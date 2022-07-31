@@ -25,6 +25,7 @@ RDEPEND="${DEPEND}
 
 # ebuild function overrides
 src_prepare() {
+	default
 	epatch_user
 }
 src_install() {
