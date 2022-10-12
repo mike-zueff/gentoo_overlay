@@ -21,30 +21,30 @@ RDEPEND="
 	>=app-text/hunspell-1.2:=
 	dev-libs/eb
 	dev-libs/lzo
-	dev-qt/qtcore:5
-	dev-qt/qtgui:5
-	dev-qt/qthelp:5
-	dev-qt/qtnetwork:5
-	dev-qt/qtprintsupport:5
-	dev-qt/qtsingleapplication[qt5(+),X]
+	dev-qt/qtcore
+	dev-qt/qtgui
+	dev-qt/qthelp
+	dev-qt/qtnetwork
+	dev-qt/qtprintsupport
+	dev-qt/qtsingleapplication[X]
 	dev-qt/qtsvg:5
-	dev-qt/qtwebkit:5
-	dev-qt/qtwidgets:5
-	dev-qt/qtx11extras:5
-	dev-qt/qtxml:5
+	dev-qt/qtwebkit
+	dev-qt/qtwidgets
+	dev-qt/qtx11extras
+	dev-qt/qtxml
 	media-libs/libvorbis
-	media-libs/tiff:0
+	media-libs/tiff
 	sys-libs/zlib
 	x11-libs/libX11
 	x11-libs/libXtst
 	ffmpeg? (
 		media-libs/libao
-		media-video/ffmpeg:0=
+		media-video/ffmpeg:=
 	)
 "
 DEPEND="${RDEPEND}"
 BDEPEND="
-	dev-qt/linguist-tools:5
+	dev-qt/linguist-tools
 	virtual/pkgconfig
 "
 
