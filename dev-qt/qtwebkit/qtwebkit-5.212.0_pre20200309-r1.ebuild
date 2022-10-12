@@ -42,7 +42,7 @@ BDEPEND="
 	virtual/pkgconfig
 "
 DEPEND="
-	dev-db/sqlite:3
+	dev-db/sqlite
 	dev-libs/icu:=
 	dev-libs/libxml2
 	dev-libs/libxslt
@@ -50,15 +50,15 @@ DEPEND="
 	>=dev-qt/qtgui-${QT_MIN_VER}
 	>=dev-qt/qtnetwork-${QT_MIN_VER}
 	>=dev-qt/qtwidgets-${QT_MIN_VER}=
-	media-libs/libpng:0=
+	media-libs/libpng:=
 	media-libs/woff2
-	virtual/jpeg:0
+	virtual/jpeg
 	geolocation? ( >=dev-qt/qtpositioning-${QT_MIN_VER} )
 	gstreamer? (
-		dev-libs/glib:2
-		media-libs/gstreamer:1.0
-		media-libs/gst-plugins-bad:1.0
-		media-libs/gst-plugins-base:1.0
+		dev-libs/glib
+		media-libs/gstreamer
+		media-libs/gst-plugins-bad
+		media-libs/gst-plugins-base
 	)
 	hyphen? ( dev-libs/hyphen )
 	multimedia? ( >=dev-qt/qtmultimedia-${QT_MIN_VER}[widgets] )
