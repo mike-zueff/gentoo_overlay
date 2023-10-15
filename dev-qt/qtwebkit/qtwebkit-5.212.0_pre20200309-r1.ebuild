@@ -88,6 +88,7 @@ PATCHES=(
 	"${FILESDIR}/${P}-icu-68.patch" # bug 753260
 	"${FILESDIR}/${P}-python-3.9.patch" # bug 766303
 	"${FILESDIR}/${P}-glib-2.68.patch" # bug 777759
+	"${FILESDIR}/qtwebkit_1.patch"
 )
 
 _check_reqs() {
