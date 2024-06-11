@@ -2,7 +2,6 @@ DEFINED_PHASES=install postinst preinst prepare
 DEPEND=>=sys-apps/gptfdisk-0.8.8 >=sys-fs/cryptsetup-1.6.2 app-shells/bash
 DESCRIPTION=Build secure boot EFI kernel with LUKS, LVM and plymouth
 EAPI=7
-HOMEPAGE=https://github.com/sakaki-/buildkernel
 IUSE=+plymouth
 KEYWORDS=~amd64
 LICENSE=GPL-3+
@@ -10,4 +9,4 @@ RDEPEND=>=sys-apps/gptfdisk-0.8.8 >=sys-fs/cryptsetup-1.6.2 app-shells/bash >=sy
 RESTRICT=mirror
 SLOT=0
 SRC_URI=https://github.com/sakaki-/buildkernel/releases/download/1.0.37/buildkernel-1.0.37.tar.gz
-_md5_=f9befa76bf02f7658edbb0aa6c032aa3
+_md5_=b5545ad04cf4c4b14f6f0985124660d6
