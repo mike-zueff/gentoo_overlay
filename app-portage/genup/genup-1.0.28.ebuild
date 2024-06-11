@@ -2,9 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=6
-
-inherit eutils
+EAPI=7
 
 DESCRIPTION="Update Portage tree, all installed packages, and kernel"
 BASE_SERVER_URI="https://github.com/sakaki-"

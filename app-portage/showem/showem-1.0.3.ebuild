@@ -3,9 +3,7 @@
 # License: GPL v2
 # NO WARRANTY
 
-EAPI=6
-
-inherit eutils
+EAPI=7
 
 DESCRIPTION="View output of a parallel emerge from a separate terminal"
 BASE_SERVER_URI="https://github.com/sakaki-"
