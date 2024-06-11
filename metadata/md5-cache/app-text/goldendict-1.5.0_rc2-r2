@@ -1,0 +1,15 @@
+BDEPEND=dev-qt/linguist-tools virtual/pkgconfig
+DEFINED_PHASES=configure install prepare
+DEPEND=app-arch/bzip2 >=app-text/hunspell-1.2:= dev-libs/eb dev-libs/lzo dev-qt/qtcore dev-qt/qtgui dev-qt/qthelp dev-qt/qtnetwork dev-qt/qtprintsupport dev-qt/qtsingleapplication[X] dev-qt/qtsvg:5 dev-qt/qtwebkit dev-qt/qtwidgets dev-qt/qtx11extras dev-qt/qtxml media-libs/libvorbis media-libs/tiff sys-libs/zlib x11-libs/libX11 x11-libs/libXtst ffmpeg? ( media-libs/libao media-video/ffmpeg:= )
+DESCRIPTION=Feature-rich dictionary lookup program
+EAPI=7
+HOMEPAGE=http://goldendict.org/
+INHERIT=desktop qmake-utils
+IUSE=debug ffmpeg
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+RDEPEND=app-arch/bzip2 >=app-text/hunspell-1.2:= dev-libs/eb dev-libs/lzo dev-qt/qtcore dev-qt/qtgui dev-qt/qthelp dev-qt/qtnetwork dev-qt/qtprintsupport dev-qt/qtsingleapplication[X] dev-qt/qtsvg:5 dev-qt/qtwebkit dev-qt/qtwidgets dev-qt/qtx11extras dev-qt/qtxml media-libs/libvorbis media-libs/tiff sys-libs/zlib x11-libs/libX11 x11-libs/libXtst ffmpeg? ( media-libs/libao media-video/ffmpeg:= )
+SLOT=0
+SRC_URI=https://github.com/goldendict/goldendict/archive/1.5.0-RC2.tar.gz -> goldendict-1.5.0_rc2.tar.gz
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	multilib	c19072c3cd7ac5cb21de013f7e9832e0	qmake-utils	a8dd17b1d94586164f5e3fc12b1c6b81
+_md5_=e1a4a5ad8c784b2d494bde031739c40b

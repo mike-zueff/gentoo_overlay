@@ -1,0 +1,13 @@
+DEFINED_PHASES=install
+DEPEND=cluster? ( app-emulation/docker )
+DESCRIPTION=Enterprise Kubernetes for Developers
+EAPI=7
+HOMEPAGE=https://www.openshift.org
+IUSE=cluster
+KEYWORDS=amd64
+LICENSE=Apache-2.0
+RDEPEND=cluster? ( app-emulation/docker )
+RESTRICT=binchecks strip
+SLOT=0
+SRC_URI=https://github.com/openshift/origin/releases/download/v3.9.0/openshift-origin-client-tools-v3.9.0-191fece-linux-64bit.tar.gz
+_md5_=6be21d13a01a77e0df78af7ac7fb12fb
