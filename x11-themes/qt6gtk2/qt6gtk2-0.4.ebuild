@@ -10,6 +10,7 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 SRC_URI="https://www.opencode.net/trialuser/qt6gtk2/-/archive/${PV}/${P}-${PV}.tar.gz"
+S="${WORKDIR}/${PN}-${PV}-*"
 
 RDEPEND="dev-qt/qtbase:6=
 	x11-libs/gtk+:2
